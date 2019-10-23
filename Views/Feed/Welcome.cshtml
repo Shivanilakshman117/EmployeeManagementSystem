@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+    <h2>Hi, @HttpContext.Current.User.Identity.Name</h2>
+
+@if (Request.IsAuthenticated)
+{
+
+    <div>
+        @Html.ActionLink("Logout", "Login", "Account")
+    </div>
+
+}
